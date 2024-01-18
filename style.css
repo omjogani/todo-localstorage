@@ -1,0 +1,283 @@
+/* ================================================= */
+/* Common Styling */
+/* ================================================= */
+* {
+    font-family: "Poppins";
+}
+
+body {
+    text-align: center;
+    background-color: aliceblue;
+}
+
+/* ================================================= */
+/* Heading & Add Todos Button */
+/* ================================================= */
+.heading {
+    font-family: "Sofia", "sens-serif";
+}
+.heading-container{
+    background-color: cornflowerblue;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.add-todos {
+    border-radius: 8px;
+    background-color: #262626;
+    color: white;
+    padding: 5px 20px;
+    font-size: 22px;
+    text-align: start;
+    border: 1px solid black;
+}
+
+.add-todos:hover {
+    background-color: black;
+}
+
+/* ================================================================== */
+/* Add Todo Title & Todo Title & Description Fields & Add Todo Button */
+/* ================================================================== */
+.add-todo-title {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.todo-title-field {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 5px ;
+    height: 40px;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+.todo-description-field {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 5px ;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 8px;
+    border: 2px solid black;
+    resize: none;
+}
+
+.add-todo-button {
+    display: block;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #262626;
+    color: white;
+    font-size: 22px;
+    margin-left: 8px;
+    text-align: start;
+    border: 1px solid black;
+}
+
+.add-todo-button:hover {
+    background-color: black;
+}
+
+/* ================================================= */
+/* Add Todo Pop-Up */
+/* ================================================= */
+.add-todo-pop-up {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pop-up-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.invisible {
+    visibility:hidden;
+    font-size: 1px;
+}
+
+.close {
+    float: right;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #262626;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* Statistics of Todos */
+/* ================================================= */
+.todo-stats-title {
+    margin: 0px;
+}
+.stats {
+    list-style-type: none;
+}
+
+.stats li .remaining-todos,
+.stats li .completed-todos,
+.stats li .total-todos {
+    background-color: cornflowerblue;
+    color: black;
+    padding: 0px 6px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+.stats li{
+    background-color: #262626;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 5px;
+}
+
+/* ================================================= */
+/* All Todos */
+/* ================================================= */
+.todos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+.todo {
+    text-align: start;
+    display: flex;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.todos li{
+    list-style-type: none;
+    width: 60%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 3px 0px 0px 5px;
+}
+
+input[type="checkbox"]:checked + .checkbox-circle {
+    background-color: #4CAF50;
+    border: 2px solid green;
+}
+
+input[type="checkbox"]:checked + .checkbox-circle::before {
+    content: '\2713';
+    color: white; 
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todos li div .checkbox {
+    border-radius: 10px;
+    font-size: 50px;
+    background-color: black;
+}
+
+.todo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.todo-content .todo-title-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.remove-todo {
+    float: right;
+    font-size: 25px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* Footer Section */
+/* ================================================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+.footer-text {
+    font-family: "Sofia", "sens-serif";
+}
+/* ================================================= */
+/* Mobile Layout */
+/* ================================================= */
+@media (max-width: 480px) {
+    .todos li{
+        list-style-type: none;
+        width: 90%;
+    }
+}
+
+/* ================================================= */
+/* Laptop, Ipads Layout */
+/* ================================================= */
+@media (min-width: 481px) and (max-width: 767px) {
+    .todos li{
+        list-style-type: none;
+        width: 90%;
+    }
+}
+
+/* ================================================= */
+/* Laptop, Ipads Layout */
+/* ================================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .todos li{
+        list-style-type: none;
+        width: 70%;
+    }
+}

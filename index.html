@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <header id="main-header">
+        <div class="heading-container">
+            <h1 class="heading">TODO: Your Path to Productivity...</h1>
+        </div>
+        <hr>
+        <button id="add-todos" class="add-todos">Add Todo</button>
+    </header>
+
+    <!-- Add Todo Pop-Up -->
+    <div id="add-todo-pop-up" class="add-todo-pop-up">
+        <div class="pop-up-content">
+            <span class="close">&times;</span>
+            <p class="add-todo-title">Add TODO</p>
+            <p class="invisible" id="todo-id"></p>
+            <form id="add-todo-form">
+                <input type="text" id="todo-title-field" class="todo-title-field" name="todo-title" placeholder="e.g. Complete Work" autofocus required><br>
+                <textarea id="todo-description-field" class="todo-description-field" name="todo-description" placeholder="e.g. Finish Homework..." rows="6"></textarea><br>
+                <button type="submit" id="add-todo-button" class="add-todo-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <div class="container" id="main-content">
+            <h3 class="todo-stats-title">Todo Statistics</h3>
+            <ui class="stats">
+                <li>
+                    <span>Remaining</span>
+                    <span class="remaining-todos">0</span>
+                </li>
+                <li>
+                    <span>Completed</span>
+                    <span class="completed-todos">0</span>
+                </li>
+                <li>
+                    <span>Total</span>
+                    <span class="total-todos">0</span>
+                </li>
+            </ui>
+            <ul class="todos">
+                <!-- All Todos here -->
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p class="footer-text">Designed & Developed by <a href="https://github.com/omjogani" target="_blank">Om Jogani</a></p>
+        </div>
+    </footer>
+<script src="./main.js"></script>
+</body>
+</html>
